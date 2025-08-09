@@ -1,18 +1,18 @@
 <div class="fixed-grid has-6-cols">
   <div class="grid">
-    <%= link_to({ controller: 'cms/admin/carousels' }, class: 'cell button is-fullwidth') do %>
+    <%= link_to({ controller: 'cms/admin/carousels' }, data: { turbo_frame: 'body', action: 'menu-popup#enter' }, class: 'cell button is-fullwidth') do %>
       <span><%= t('cms.admin.carousels.index.title') %></span>
     <% end %>
-    <%= link_to({ controller: 'cms/admin/audios' }, class: 'cell button is-fullwidth') do %>
+    <%= link_to({ controller: 'cms/admin/audios' }, data: { turbo_frame: 'body', action: 'menu-popup#enter' }, class: 'cell button is-fullwidth') do %>
       <span><%= t('cms.admin.audios.index.title') %></span>
     <% end %>
-    <%= link_to({ controller: 'cms/admin/videos' }, class: 'cell button is-fullwidth') do %>
+    <%= link_to({ controller: 'cms/admin/videos' }, data: { turbo_frame: 'body', action: 'menu-popup#enter' }, class: 'cell button is-fullwidth') do %>
       <span><%= t('cms.admin.videos.index.title') %></span>
     <% end %>
-    <%= link_to({ controller: 'cms/admin/covers' }, class: 'cell button is-fullwidth') do %>
+    <%= link_to({ controller: 'cms/admin/covers' }, data: { turbo_frame: 'body', action: 'menu-popup#enter' }, class: 'cell button is-fullwidth') do %>
       <span><%= t('cms.admin.covers.index.title') %></span>
     <% end %>
-    <%= link_to({ controller: 'cms/admin/tags' }, class: 'cell button is-fullwidth') do %>
+    <%= link_to({ controller: 'cms/admin/tags' }, data: { turbo_frame: 'body', action: 'menu-popup#enter' }, class: 'cell button is-fullwidth') do %>
       <span><%= t('cms.admin.tags.index.title') %></span>
     <% end %>
   </div>
