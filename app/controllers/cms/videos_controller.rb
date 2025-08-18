@@ -5,7 +5,7 @@ module Cms
 
     def index
       q_params = params.permit(:video_taxon_id, :author_id, 'title-like', 'created_at-desc', 'view_count-desc', :id)
-      unless q_params[:author_id].to_i == current_user&.id
+      unless q_params[:author_id] == current_user&.id
         q_params.merge! state: 'verified'
       end
 
@@ -31,7 +31,7 @@ module Cms
       end
 
       q_params = params.permit(:video_taxon_id, :author_id, 'title-like', 'created_at-desc', 'view_count-desc', :per)
-      unless q_params[:author_id].to_i == current_user&.id
+      unless q_params[:author_id] == current_user&.id
         q_params.merge! state: 'verified'
       end
 
