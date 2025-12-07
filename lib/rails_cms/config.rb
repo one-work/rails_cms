@@ -1,10 +1,6 @@
-require 'active_support/configurable'
-
 module RailsCms
-  include ActiveSupport::Configurable
+  mattr_accessor :config, default: ActiveSupport::OrderedOptions.new
 
-  configure do |config|
-    config.water_mark = false
-  end
+  config.water_mark = false
 
 end
