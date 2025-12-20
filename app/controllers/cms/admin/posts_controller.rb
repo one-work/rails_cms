@@ -8,6 +8,14 @@ module Cms
       @posts = Post.default_where(q_params).order(id: :asc).page(params[:page])
     end
 
+    private
+    def post_params
+      params.fetch(:post, {}).permit(
+        :content,
+        :title
+      )
+    end
+
   end
 end
 
