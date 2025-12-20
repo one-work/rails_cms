@@ -15,5 +15,8 @@
     <%= link_to({ controller: 'cms/admin/tags' }, data: { turbo_frame: 'panel', action: 'menu-popup#enter' }, class: 'cell button is-fullwidth') do %>
       <span><%= t('cms.admin.tags.index.title') %></span>
     <% end %>
+    <%= link_to({ controller: 'cms/admin/posts' }, data: { turbo_frame: 'panel', action: 'menu-popup#enter' }, class: 'cell button is-fullwidth') do %>
+      <span><%= t('cms.admin.posts.index.title') %></span>
+    <% end %>
   </div>
 </div>
