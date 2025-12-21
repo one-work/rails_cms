@@ -13,7 +13,9 @@ Rails.application.routes.draw do
     resources :video_tags
     resources :audios, only: [:index, :show]
     resources :carousels
-
+    resources :catalogs do
+      resources :posts, controller: 'catalog/posts'
+    end
 
     namespace :admin, defaults: { namespace: 'admin' } do
       root 'home#index'
