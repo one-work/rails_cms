@@ -1,7 +1,7 @@
 <div data-controller="slide" data-slide-play-value="true" data-slide-circle-value="true" class="slide">
   <div class="slide-container" data-slide-target="container">
     <% @carousels.each_with_index do |carousel, index| %>
-      <%= render partial: 'carousel', locals: { model: carousel, index: index } %>
+      <%= render partial: 'cms_carousel', locals: { model: carousel, index: index } %>
     <% end %>
   </div>
   <div class="slide-dot" data-slide-target="dot">
