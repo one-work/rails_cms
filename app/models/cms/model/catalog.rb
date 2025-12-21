@@ -1,15 +1,13 @@
 # frozen_string_literal: true
 
 module Cms
-  module Model::Post
+  module Model::Catalog
     extend ActiveSupport::Concern
 
     included do
       attribute :title, :string
 
-      belongs_to :catalog
-
-      has_rich_text :content
+      has_many :posts
     end
 
   end
