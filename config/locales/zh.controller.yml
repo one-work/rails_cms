@@ -15,6 +15,9 @@ zh:
       carousels:
         index:
           title: 轮播图
+      catalogs:
+        index:
+          title: 分类
       covers:
         index:
           title: 图

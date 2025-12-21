@@ -18,6 +18,9 @@ Rails.application.routes.draw do
     namespace :admin, defaults: { namespace: 'admin' } do
       root 'home#index'
       resources :tags
+      resources :catalogs do
+        resources :posts, controller: 'catalog/posts'
+      end
       resources :posts
       resources :covers
       resources :videos

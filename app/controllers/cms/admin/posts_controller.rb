@@ -10,10 +10,11 @@ module Cms
 
     private
     def post_params
-      params.fetch(:post, {}).permit(
+      p = params.fetch(:post, {}).permit(
         :content,
         :title
       )
+      p.merge! default_params
     end
 
   end
