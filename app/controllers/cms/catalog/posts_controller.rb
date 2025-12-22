@@ -1,5 +1,5 @@
 module Cms
-  class Catalog::PostsController < BaseController
+  class Catalog::PostsController < PostsController
     before_action :set_catalog
 
     def index
