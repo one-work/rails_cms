@@ -9,11 +9,9 @@ gem 'propshaft'
 
 gem 'default_where', github: 'qinmingyuan/default_where'
 
-gem 'rails_com', github: 'work-design/rails_com'
-gem 'rails_design', github: 'work-design/rails_design'
-gem 'rails_notice', github: 'work-design/rails_notice'
-
-gem 'amazing_print'
+gem 'rails_com', path: '../rails_com'
+gem 'rails_ui', path: '../rails_ui'
+gem 'rails_notice', path: '../rails_notice'
 
 group :development do
   gem 'listen'
