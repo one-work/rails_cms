@@ -6,7 +6,7 @@
         <% if carousel.image.content_type.to_s.start_with?('video') %>
           <%= video_tag carousel.image.url, controls: true %>
         <% else %>
-          <%= image_tag carousel.image %>
+          <%= image_tag carousel.image.url %>
         <% end %>
       <% end %>
       <figcaption><%= index + 1 %>/<%= Cms::Carousel.default_where(default_params).size %></figcaption>
@@ -16,7 +16,7 @@
       <% if carousel.image.content_type.to_s.start_with?('video') %>
         <%= video_tag carousel.image.url, controls: true %>
       <% else %>
-        <%= image_tag carousel.image %>
+        <%= image_tag carousel.image.url %>
       <% end %>
       <figcaption><%= index + 1 %>/<%= Cms::Carousel.default_where(default_params).size %></figcaption>
     </figure>
