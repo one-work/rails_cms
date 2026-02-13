@@ -8,7 +8,7 @@
 >
 <% Cms::Carousel.default_where(default_params).each_with_index do |carousel, index| %>
   <% if carousel.link.present? %>
-    <figure class="image" data-action="touchmove->slide#move:passive touchend->slide#end:passive" data-index="<%= index %>">
+    <figure class="<%= index == 0 ? 'image is-active' : 'image' %>" data-action="touchmove->slide#move:passive touchend->slide#end:passive" data-index="<%= index %>">
       <%= link_to(carousel.link) do %>
         <% if carousel.image.content_type.to_s.start_with?('video') %>
           <%= video_tag carousel.image.url, controls: true %>
@@ -19,7 +19,7 @@
       <figcaption><%= index + 1 %>/<%= Cms::Carousel.default_where(default_params).size %></figcaption>
     </figure>
   <% else %>
-    <figure class="image" data-action="touchmove->slide#move:passive touchend->slide#end:passive" data-index="<%= index %>">
+    <figure class="<%= index == 0 ? 'image is-active' : 'image' %>" data-action="touchmove->slide#move:passive touchend->slide#end:passive" data-index="<%= index %>">
       <% if carousel.image.content_type.to_s.start_with?('video') %>
         <%= video_tag carousel.image.url, controls: true %>
       <% else %>
