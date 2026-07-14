@@ -40,8 +40,7 @@ module Cms
         self.save!
         to_notification(
           receiver: self.author,
-          linked: self,
-          verbose: true
+          linked: self
         ) if self.author
       end
     end
