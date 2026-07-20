@@ -1,2 +1,2 @@
 <%= f.text_field :title %>
-<%= f.file_field :media %>
+<%= render partial: 'com/attachments/list_field', locals: { target: f.object.media, f: f } %>
