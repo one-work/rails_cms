@@ -80,7 +80,7 @@ module Cms
     end
 
     def share_url(current_user)
-      url_helpers = Rails.application.routes.url_helpers
+      url_helpers = Rails.app.routes.url_helpers
 
       if current_user
         url_helpers.video_url(self.id, user_id: current_user.id)
