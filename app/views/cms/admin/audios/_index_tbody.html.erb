@@ -6,9 +6,9 @@
 <td>
 <% if model.cover.attached? %>
   <% if ['video/mp4'].include?(model.cover_blob.content_type) %>
-    <%= video_tag model.cover, class: 'image is-64x64' %>
+    <%= video_tag model.cover, class: 'image is-radius is-64x64' %>
   <% else %>
-    <%= image_tag model.cover, class: 'image is-64x64' %>
+    <%= image_tag model.cover, class: 'image is-radius is-64x64' %>
   <% end %>
 <% end %>
 </td>
